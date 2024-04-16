@@ -6,84 +6,14 @@
 Note: оценки всегда будут уникальными (поэтому никаких повторяющихся значений) */
 
 function myLanguages(results) {
-
+  for (let key in results) {
+    if (results[key] < 60) {
+      delete results[key];
+    }
+  }
+  const Res = Object.keys(results).sort((a, b) => results[b] - results[a]);
+  return Res;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(myLanguages({"Java": 70, "Ruby": 80, "Python": 95}));
 module.exports = myLanguages
-

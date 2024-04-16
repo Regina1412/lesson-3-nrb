@@ -11,52 +11,16 @@
 *  Вы можете использовать рекурсию
 * */
 
-function fibonacci(num) {
-
+function fibonacci(num) {  
+    let k1 = 0;
+    let k2 = 1;
+    for (let i = 0; i < num; i++)
+    {
+        t = k2;
+        k2 += k1;
+        k1 = t;
+    }
+    return k1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(fibonacci(5));
 module.exports = fibonacci

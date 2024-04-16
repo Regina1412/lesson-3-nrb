@@ -4,50 +4,15 @@
 * */
 
 function getVowelsCount(str) {
-
+    let kol = 0;
+    for (const s of str){
+        if (s=="a" || s=="e" || s=="i" || s=="o" || s=="u" || s=="y"){
+            kol ++;
+        }
+    }
+    return kol;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(getVowelsCount("adafwfer"));
 module.exports = getVowelsCount
